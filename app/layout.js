@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import NavBar from "./NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,17 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        <nav className="fixed top-0 left-0 w-full z-50 flex items-center gap-8 px-8 h-16 bg-white border-b border-gray-200 shadow-sm">
-          <span className="font-bold text-xl tracking-wide text-blue-600 mr-8 select-none">
-            MedMate
-          </span>
-          <Link href="/dashboard" className="text-gray-800 hover:text-blue-600 transition-colors py-2 px-2 font-medium">Dashboard</Link>
-          <Link href="/record-new-case" className="text-gray-800 hover:text-blue-600 transition-colors py-2 px-2 font-medium">Record New Case</Link>
-          <Link href="/soap-note" className="text-gray-800 hover:text-blue-600 transition-colors py-2 px-2 font-medium">SOAP Note</Link>
-          <Link href="/case-feedback" className="text-gray-800 hover:text-blue-600 transition-colors py-2 px-2 font-medium">Case Feedback</Link>
-          <Link href="/ai-assistant" className="text-gray-800 hover:text-blue-600 transition-colors py-2 px-2 font-medium">AI Assistant</Link>
-          <Link href="/case-library" className="text-gray-800 hover:text-blue-600 transition-colors py-2 px-2 font-medium">Case Library</Link>
-        </nav>
+        <NavBar />
         <div className="pt-20 px-4 md:px-8">
           {children}
         </div>
