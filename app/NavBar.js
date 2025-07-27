@@ -13,7 +13,7 @@ export default function NavBar() {
     { href: "/case-library", label: "Case Library" },
   ];
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex items-center gap-8 px-8 h-16 bg-white border-b border-gray-200 shadow-sm">
+    <nav className="top-0 left-0 w-full z-50 flex items-center gap-8 px-8 h-16 bg-white border-b border-gray-200 shadow-sm">
       <span className="font-bold text-xl tracking-wide text-blue-600 mr-8 select-none">
         MedMate
       </span>
